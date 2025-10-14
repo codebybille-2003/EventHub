@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align:center; margin-top:50px;">
+
+    <h1 style="color:#4b0082; font-size:36px; margin-bottom:15px;">Welcome to EventHub!</h1>
+    <p style="font-size:18px; margin-bottom:30px;">
+        Discover, manage, and organize events seamlessly. <br>
+        Sign up to start creating your own events or explore upcoming ones.
+    </p>
+
+    {% if not user.is_authenticated %}
+        <!-- Show only when not logged in -->
+        <a href="{% url 'login' %}" class="btn btn-primary" style="padding:12px 25px; margin-right:15px;">Login</a>
+        <a href="{% url 'register' %}" class="btn btn-primary" style="padding:12px 25px;">Register</a>
+    {% else %}
+        <!-- Show this when logged in -->
+        <a href="{% url 'event_list' %}" class="btn btn-primary" style="padding:12px 25px;">View Events</a>
+    {% endif %}
+
+    <div style="display:flex; justify-content:center; flex-wrap:wrap; margin-top:50px;">
+        <div style="width:250px; margin:15px; padding:20px; background:#fff; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#4b0082;">Create Events</h3>
+            <p>Easily create and organize events in minutes.</p>
+        </div>
+        <div style="width:250px; margin:15px; padding:20px; background:#fff; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#4b0082;">Manage Easily</h3>
+            <p>Edit or delete events anytime with a click.</p>
+        </div>
+        <div style="width:250px; margin:15px; padding:20px; background:#fff; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#4b0082;">Stay Updated</h3>
+            <p>View upcoming events at a glance.</p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

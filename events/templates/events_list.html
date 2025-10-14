@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>All Events</h1>
+
+{% if events %}
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Actions</th>
+    </tr>
+    {% for event in events %}
+    <tr>
+        <td>{{ event.title }}</td>
+        <td>{{ event.description }}</td>
+        <td>{{ event.date }}</td>
+        <td>{{ event.location }}</td>
+        <td>
+            <a href="{% url 'event_edit' event.pk %}">Edit</a> |
+            <a href="{% url 'event_delete' event.pk %}" class="delete-btn">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<div class="empty-message">
+    <p>No events available.</p>
+    <a href="{% url 'event_create' %}" class="add-btn">Add a new event</a>
+</div>
+{% endif %}
+
+{% endblock content %}
