@@ -26,16 +26,21 @@ Version Control: Git & GitHub
 
 📷 Screenshots
 
-Home Page
+📷 Screenshots
 
+**Home Page**  
+![Home Page](screenshots/Screenshot_14-10-2025_14378_127.0.0.1.jpeg)
+![Home Page](screenshots/Screenshot_14-10-2025_14316_127.0.0.1.jpeg)
 
-Register Page
+**Register Page**  
+![Register Page](screenshots/Screenshot_14-10-2025_143122_127.0.0.1.jpeg)
 
+**Login Page**  
+![Login Page](screenshots/Screenshot_14-10-2025_143127.0.0.1.jpeg)
 
-Login Page
+**Event List Page**  
+![Event List Page](screenshots/Screenshot_14-10-2025_143647.0.0.1.jpeg)
 
+**Event Create/Edit Page**  
+![Event Create/Edit Page](screenshots/Screenshot_14-10-2025_143217_127.0.0.1.jpeg)
 
-Event List Page
-
-
-Event Create/Edit Page
